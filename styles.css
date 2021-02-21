@@ -1,7 +1,12 @@
 #content-window{
     display: flex;
+    flex-direction: column;
 }
 
 #about-me-box{
-    
+    background-color: darksalmon;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
