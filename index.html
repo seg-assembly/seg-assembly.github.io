@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Stephen Galvin's Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="intro_box_animation.css" />
   </head>
   <body>
     <header>
@@ -11,7 +12,7 @@
     </header>
     <div id="content-window">
       <div id="intro-box">
-        <div id="left-intro">
+        <div id="left-intro" class="fade-in-left">
           <h1 id="name-text">Stephen Galvin</h1>
           <h2>Application Developer</h2>
         </div>
@@ -19,14 +20,14 @@
         <img />
       </div>
 
-      <div id="about-me-box">
+      <div id="about-me-box" class="display-box">
         <h2 class="centered">About Me</h2>
         <p>
           I'm a senior computer science major at DeSales University, looking to
           graduate Spring 2021.
         </p>
       </div>
-      <div id="portfolio-box">
+      <div id="portfolio-box" class="display-box">
         <h2 class="centered">Portfolio</h2>
         <div id="portfolio-card-holder">
           <div class="portfolio-card"></div>

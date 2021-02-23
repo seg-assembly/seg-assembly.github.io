@@ -23,6 +23,10 @@ header {
     display: flex;
 }
 
+#left-intro {
+    position: relative;
+}
+
 #name-text{
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: min-content;
@@ -66,4 +70,8 @@ header {
 
 .centered{
     margin: auto;
+}
+
+.display-box{
+    box-shadow: 2px 2px 4px darkgrey;
 }
