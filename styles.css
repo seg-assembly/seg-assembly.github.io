@@ -21,6 +21,7 @@ header {
 
 #intro-box{
     display: flex;
+    flex: 1;
 }
 
 #left-intro {
@@ -36,6 +37,7 @@ header {
     /*Display*/
     display: flex;
     flex-direction: column;
+    flex: 1;
     
     /*Style*/
     border-radius: 1rem;
@@ -58,12 +60,16 @@ header {
     /*Spacing*/
     padding: 1rem;
     margin-top: 1rem;
+    margin-bottom: .75rem;
 }
 
 #portfolio-card-holder{
     /*Display*/
     display: flex;
     flex-direction: row;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /*Class Styles*/
@@ -74,4 +80,21 @@ header {
 
 .display-box{
     box-shadow: 2px 2px 4px darkgrey;
+}
+
+.portfolio-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cadetblue;
+    padding: 1rem;
+    min-height: 15rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px darkgrey;
+    transition: transform .2s;
+}
+
+.portfolio-card:hover{
+    background-color: rgb(70, 116, 117);
+    transform: scale(1.08);
 }
