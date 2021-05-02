@@ -3,7 +3,7 @@ const projects = [
         Name: "Retro Graphics Studio",
         ProjectType: "Capstone",
         Description: "An application to create Nintendo Entertainment System Graphics and export them as a .bin file.",
-        imgName: "#"
+        imgName: ""
     }
 ]
 
@@ -52,17 +52,19 @@ function createInfoBox(project) {
                 .addClass("info-box-title")
             )
             .append(
-            $("<a></a>")
+            $("<button></button>")
                 .text("x")
-                .attr("href", "#")
                 .addClass("info-box-x-button")
-                .on("click", function() {
+                .on("click", function (event) {
+                    event.preventDefault();
                     console.log("x has been clicked");
                     console.log($(".expand-info-box").eq(0));
                     $(".expand-info-box").eq(0).css("display", "none");
                     $(".expand-info-box").eq(0).removeClass("expand-info-box");
                     $(".selected-card").eq(0).addClass("hover-card");
                     $(".selected-card").eq(0).removeClass("selected-card");
+                    $("#window-stopper").css("display", "none");
+                    event.stopImmediatePropagation();
                 })
             )
         );
