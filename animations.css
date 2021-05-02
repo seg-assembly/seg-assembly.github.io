@@ -1,0 +1,21 @@
+@keyframes intro-name-fade-in-left {
+  from {
+    opacity: 15%;
+    left: -250px;
+  }
+  to {
+    opacity: 100%;
+    left: 0px;
+  }
+}
+
+@keyframes info-box-expand {
+  from {
+    height: 0;
+    width: 0;
+  }
+  to {
+    height: 80vh;
+    width: 80vw;
+  }
+}

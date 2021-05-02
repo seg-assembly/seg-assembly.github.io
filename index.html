@@ -3,42 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <title>Stephen Galvin's Portfolio</title>
+    <link rel="stylesheet" href="animations.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="intro_box_animation.css" />
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
   </head>
   <body>
-    <header>
-      <p>Portfolio Website in Progress...</p>
-    </header>
+    <div id="window-stopper"></div>
     <div id="content-window">
       <div id="intro-box">
-        <div id="left-intro" class="fade-in-left">
+        <div id="left-intro" class="intro-name-fade-in-left">
           <h1 id="name-text">Stephen Galvin</h1>
           <h2>Application Developer</h2>
+          <h3>Site in Progress</h3>
         </div>
         <span></span>
         <img />
       </div>
       <div id="about-me-box" class="display-box">
-        <h2 class="centered">About Me</h2>
+        <h2 class="header-centered">About Me</h2>
         <p>
           I'm a senior computer science major at DeSales University, looking to
           graduate Spring 2021.
         </p>
       </div>
       <div id="portfolio-box" class="display-box">
-        <h2 class="centered">Portfolio</h2>
-        <div id="portfolio-card-holder">
-          <div class="portfolio-card">
-            <p class="portfolio-card-title">Retro Graphics Studio</p>
-            <img
-              class="portfolio-card-image"
-              src="#"
-              height="100px"
-              width="100px"
-            />
-          </div>
-        </div>
+        <h2 class="header-centered">Portfolio</h2>
+        <div id="portfolio-card-holder"></div>
       </div>
     </div>
   </body>
