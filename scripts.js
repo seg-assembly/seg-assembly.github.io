@@ -10,6 +10,7 @@ const projects = [
 $(function () {
     projects.forEach(element => {
         $("#portfolio-card-holder").append(createCard(element));
+        $("#info-box-holder").append(createInfoBox(element));
     });
 });
 
@@ -27,13 +28,14 @@ function createCard(project) {
 
     card.append(cardTitle);
     card.append(cardImage);
-    card.append(createInfoBox(project));
 
-    card.on("click", function () {
+    card.on("click", function (event) {
+        var cardIndex = $(this).index();
+        console.log(cardIndex);
         $(this).removeClass("hover-card");
         $(this).addClass("selected-card");
-        $(this).children(".info-box").css("display", "block");
-        $(this).children(".info-box").addClass("expand-info-box");
+        $(".info-box").eq(cardIndex).css("display", "block");
+        $(".info-box").eq(cardIndex).addClass("expand-info-box");
         $("#window-stopper").css("display", "block");
     })
 
@@ -56,15 +58,11 @@ function createInfoBox(project) {
                 .text("x")
                 .addClass("info-box-x-button")
                 .on("click", function (event) {
-                    event.preventDefault();
-                    console.log("x has been clicked");
-                    console.log($(".expand-info-box").eq(0));
                     $(".expand-info-box").eq(0).css("display", "none");
                     $(".expand-info-box").eq(0).removeClass("expand-info-box");
                     $(".selected-card").eq(0).addClass("hover-card");
                     $(".selected-card").eq(0).removeClass("selected-card");
                     $("#window-stopper").css("display", "none");
-                    event.stopImmediatePropagation();
                 })
             )
         );
