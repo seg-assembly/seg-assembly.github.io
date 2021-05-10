@@ -1,3 +1,11 @@
+:root {
+  --palette-black: rgb(50, 50, 50);
+  --palette-grey: #c8c8c8;
+  --palette-white: rgb(250, 250, 250);
+  --palette-champagne: rgb(249, 215, 147);
+  --palette-honey: rgb(247, 179, 43);
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -11,7 +19,7 @@ header {
 }
 
 body {
-  background-color: rgb(50, 50, 50);
+  background-color: var(--palette-black);
   margin: 0;
 }
 
@@ -21,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 4rem;
-  background-color: rgb(250, 250, 250);
+  background-color: var(--palette-white);
   height: 100vh;
   padding: 2rem;
 }
@@ -42,11 +50,11 @@ body {
 
 #about-me-box {
   flex: 1;
-  background-color: darksalmon;
+  background-color: var(--palette-honey);
 }
 
 #portfolio-box {
-  background-color: lightgrey;
+  background-color: var(--palette-grey);
   margin-bottom: 0.75rem;
 }
 
@@ -55,6 +63,7 @@ body {
   flex-direction: row;
   padding-left: 1rem;
   padding-right: 1rem;
+  gap: 1rem;
 }
 
 #window-stopper {
@@ -93,22 +102,30 @@ body {
   box-shadow: 2px 2px 4px darkgrey;
 }
 
+/*
+    Portfolio Card 
+*/
 .portfolio-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: cadetblue;
+  background-color: var(--palette-champagne);
   padding: 1rem;
   height: 15rem;
-  width: 160px;
+  width: 10rem;
   border-radius: 1rem;
   box-shadow: 2px 2px 2px darkgrey;
 }
 
 .hover-card:hover {
-  transition: transform 0.2s;
-  background-color: rgb(70, 116, 117);
+  transition: transform 0.2s, background-color 0.2s;
+  background-color:  var(--palette-honey);
   transform: scale(1.08);
+}
+
+.portfolio-card-title {
+  text-align: center;
+  font-size: 1rem;
 }
 
 .portfolio-card-image {
@@ -120,7 +137,7 @@ body {
     Info Box
 */
 .info-box {
-  background-color: #ececec;
+  background-color: var(--palette-white);
   padding: 3rem;
   display: none; 
   height: 0;
@@ -148,4 +165,7 @@ body {
 
 .info-box-x-button {
   float: right;
+  height: 2rem;
+  width: 2rem;
+  align-self: center;
 }

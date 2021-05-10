@@ -1,9 +1,19 @@
 const projects = [
     {
-        Name: "Retro Graphics Studio",
+        Name: "Retro Graphics Studio (Prototype)",
         ProjectType: "Capstone",
         Description: "An application to create Nintendo Entertainment System Graphics and export them as a .bin file.",
-        imgName: ""
+        thumbnailImage: "",
+        carouselImages: [],
+        projectURL: ""
+    },
+    {
+        Name: "something",
+        ProjectType: "",
+        Description: "",
+        thumbnailImage: "",
+        carouselImages: [],
+        projectURL: ""
     }
 ]
 
@@ -19,17 +29,17 @@ function createCard(project) {
     card.addClass("portfolio-card hover-card");
 
     var cardTitle = $("<p></p>");
-    cardTitle.addClass("portfolio-card-tile");
+    cardTitle.addClass("portfolio-card-title");
     cardTitle.text(project.Name);
 
     var cardImage = $("<img></img>");
     cardImage.addClass("portfolio-card-image");
-    cardImage.attr("src", project.imgName);
+    cardImage.attr("src", project.thumbnailImage);
 
     card.append(cardTitle);
     card.append(cardImage);
 
-    card.on("click", function (event) {
+    card.on("click", function () {
         var cardIndex = $(this).index();
         console.log(cardIndex);
         $(this).removeClass("hover-card");
@@ -57,7 +67,7 @@ function createInfoBox(project) {
             $("<button></button>")
                 .text("x")
                 .addClass("info-box-x-button")
-                .on("click", function (event) {
+                .on("click", function () {
                     $(".expand-info-box").eq(0).css("display", "none");
                     $(".expand-info-box").eq(0).removeClass("expand-info-box");
                     $(".selected-card").eq(0).addClass("hover-card");
