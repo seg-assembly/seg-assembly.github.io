@@ -1,20 +1,22 @@
 const projects = [
     {
-        Name: "Retro Graphics Studio (Prototype)",
-        ProjectType: "Capstone",
-        Description: "An application to create Nintendo Entertainment System Graphics and export them as a .bin file.",
+        Name: "Retro Graphics Studio",
+        ProjectType: "Capstone with Continued Development",
+        Description:
+            "An application to create Retro Video Game Graphics and export them as files readable by homebrew applications/games.\
+            The initial implementation of Retro Graphics Studio was developed as my college capstone and only supported creating\
+            graphics tiles for the Nintendo Entertainment System. I plan on continuing development on this project and, hopefully,\
+            expand it into a larger project for more than just Homebrew Graphics.",
         thumbnailImage: "",
         carouselImages: [],
-        projectURL: ""
+        links: [
+            {
+                url: "https://github.com/seg-assembly/retro_gfx_studio",
+                linkDesc: "Retro Graphics Studio GitHub Repository",
+                symbol: ""
+            }
+        ]
     },
-    {
-        Name: "something",
-        ProjectType: "",
-        Description: "",
-        thumbnailImage: "",
-        carouselImages: [],
-        projectURL: ""
-    }
 ]
 
 $(function () {
@@ -64,7 +66,7 @@ function createInfoBox(project) {
                 .addClass("info-box-title")
             )
             .append(
-            $("<button></button>")
+                $("<button></button>")
                 .text("x")
                 .addClass("info-box-x-button")
                 .on("click", function () {
@@ -75,6 +77,23 @@ function createInfoBox(project) {
                     $("#window-stopper").css("display", "none");
                 })
             )
+        )
+        .append(
+            $("<div></div>")
+            .addClass("info-box-image-carousel")
+        )
+        .append(
+            $("<div></div>")
+            .addClass("info-box-project-description-container")
+            .append(
+                $("<p></p>")
+                    .addClass("info-box-project-description")
+                    .text(project.Description)
+            )
+        )
+        .append(
+            $("<div></div>")
+            .addClass("info-box-link-container")
         );
 
     return infoBox;
