@@ -8,7 +8,12 @@ const projects = [
             graphics tiles for the Nintendo Entertainment System. I plan on continuing development on this project and, hopefully,\
             expand it into a larger project for more than just Homebrew Graphics.",
         thumbnailImage: "",
-        carouselImages: [],
+        carouselImages: [
+            {
+                img: "./images/retro_graphics_studio_capstone_screenshot.png",
+                desc: "Screenshot of Finished Capstone"
+            }
+        ],
         links: [
             {
                 url: "https://github.com/seg-assembly/retro_gfx_studio",
@@ -46,7 +51,7 @@ function createCard(project) {
         console.log(cardIndex);
         $(this).removeClass("hover-card");
         $(this).addClass("selected-card");
-        $(".info-box").eq(cardIndex).css("display", "block");
+        $(".info-box").eq(cardIndex).css("display", "flex");
         $(".info-box").eq(cardIndex).addClass("expand-info-box");
         $("#window-stopper").css("display", "block");
     })
@@ -80,20 +85,38 @@ function createInfoBox(project) {
         )
         .append(
             $("<div></div>")
-            .addClass("info-box-image-carousel")
-        )
-        .append(
-            $("<div></div>")
-            .addClass("info-box-project-description-container")
+            .addClass("info-box-body")
             .append(
-                $("<p></p>")
+                $("<div></div>")
+                .addClass("info-box-image-carousel")
+                .append(
+                    $("<div></div>")
+                    .addClass("info-box-carousel-image-container")
+                    .append(
+                        $("<img></img>")
+                        .addClass("info-box-carousel-image")
+                        .attr("src", project.carouselImages[0].img)
+                    )
+                    // .append(
+                    //     $("<span></span>")
+                    //     .addClass("info-box-carousel-image-desc")
+                    //     .text(project.carouselImages[0].desc)
+                    // ) 
+                )
+            )
+            .append(
+                $("<div></div>")
+                .addClass("info-box-project-description-container")
+                .append(
+                    $("<p></p>")
                     .addClass("info-box-project-description")
                     .text(project.Description)
+                )
             )
-        )
-        .append(
-            $("<div></div>")
-            .addClass("info-box-link-container")
+            .append(
+                $("<div></div>")
+                .addClass("info-box-link-container")
+            )
         );
 
     return infoBox;
