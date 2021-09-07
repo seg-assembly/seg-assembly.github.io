@@ -28,10 +28,11 @@ body {
 #content-window {
   display: flex;
   flex-direction: column;
-  margin: 0 4rem;
+  margin: 0 15%;
   background-color: var(--palette-white);
   height: 100vh;
   padding: 2rem;
+  min-width: 840px;
 }
 
 #intro-box {
@@ -51,6 +52,10 @@ body {
 #about-me-box {
   flex: 1;
   background-color: var(--palette-honey);
+}
+
+#about-me-text-holder {
+  width: 50%;
 }
 
 #portfolio-box {
@@ -100,6 +105,16 @@ body {
   padding: 1rem;
   margin-top: 1rem;
   box-shadow: 2px 2px 4px darkgrey;
+}
+
+.about-me-text {
+  font-size: 16pt;
+  text-align: justify;
+}
+
+.center-block {
+  display: block;
+  position: relative;
 }
 
 /*
@@ -172,7 +187,6 @@ body {
 }
 
 .info-box-body {
-  overflow-y: scroll;
 }
 
 /*
