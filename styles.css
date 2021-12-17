@@ -24,13 +24,11 @@ body {
 }
 
 /*Id Styles*/
-
 #content-window {
   display: flex;
   flex-direction: column;
   margin: 0 15%;
   background-color: var(--palette-white);
-  height: 100vh;
   padding: 2rem;
   min-width: 840px;
 }
@@ -78,6 +76,10 @@ body {
   display: none;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 500;
+}
+
+#skills-box {
+  background-color: var(--palette-honey);
 }
 
 /*Class Styles*/
@@ -184,9 +186,6 @@ body {
   height: 2rem;
   width: 2rem;
   align-self: center;
-}
-
-.info-box-body {
 }
 
 /*

@@ -7,7 +7,7 @@ const projects = [
             The initial implementation of Retro Graphics Studio was developed as my college capstone and only supported creating\
             graphics tiles for the Nintendo Entertainment System. I plan on continuing development on this project and, hopefully,\
             expand it into a larger project for more than just Homebrew Graphics.",
-    thumbnailImage: "",
+    thumbnailImage: "./images/header_picture.png",
     carouselImages: [
       {
         img: "./images/retro_graphics_studio_capstone_screenshot.png",
